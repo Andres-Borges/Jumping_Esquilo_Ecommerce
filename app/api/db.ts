@@ -1,4 +1,3 @@
-
 import { MongoClient, Db, ServerApiVersion } from 'mongodb';
 
 let cachedClient: MongoClient | null = null;

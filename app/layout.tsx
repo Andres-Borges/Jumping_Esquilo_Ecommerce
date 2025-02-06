@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <header>
           <a href="/products" className="flex justify-center">
             <Image src="/EsquiloLogo.png" alt="Jumping Esquilo Logo" width="100" height="100" />
@@ -24,8 +24,9 @@ export default function RootLayout({
         </header>
         <NavBar />
         {children}
-        <footer>
-          <p>&copy; Copyright Andres Borges, 2025</p>
+        <footer className="mt-auto w-full md:4/12 px-4 mx-auto text-center bg-green-200 py-4">
+          <p>&copy; Copyright Andres Borges, {new Date().getFullYear()}</p>
+          <i className="fab fa-github"></i>
         </footer>
       </body>
     </html >

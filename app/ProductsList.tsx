@@ -61,7 +61,7 @@ export default function ProductsList({ products, initialCartProducts }: { produc
                                 }}>Remove from Cart</button>
                         ) : (
                             <button
-                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+                                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full"
                                 onClick={(e) => {
                                     e.preventDefault();
                                     addToCart(product.id);
