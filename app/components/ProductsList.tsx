@@ -1,14 +1,14 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "./product-data";
+import { Product } from "../product-data";
 import { useState } from "react";
 
 export default function ProductsList({ products, initialCartProducts }: { products: Product[], initialCartProducts: Product[] }) {
     const [cartProducts, setCartProducts] = useState(initialCartProducts);
 
     async function addToCart(productId: string) {
-        const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/users/4/cart', {
+        const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/users/1/cart', {
             method: 'POST',
             body: JSON.stringify({
                 productId
@@ -23,7 +23,7 @@ export default function ProductsList({ products, initialCartProducts }: { produc
     }
 
     async function removeFromCart(productId: string) {
-        const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/users/4/cart', {
+        const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/users/1/cart', {
             method: 'DELETE',
             body: JSON.stringify({
                 productId

@@ -1,7 +1,13 @@
-import Image from "next/image";
 
-export default function Home() {
+import SetUserId from "./components/SetUserId";
+
+export default async function Home() {
+
   return (
-    <h1>This is the home page</h1>
+    <>
+      <SetUserId />
+      <h1>This is the home page</h1>
+      <p></p>
+    </>
   );
 }
