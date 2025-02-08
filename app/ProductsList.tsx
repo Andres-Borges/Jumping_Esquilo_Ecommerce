@@ -38,7 +38,7 @@ export default function ProductsList({ products, initialCartProducts }: { produc
     }
 
     function productIsInCart(productId: string) {
-        return cartProducts.some(cp => cp.id === productId);
+        return cartProducts.some(cartProduct => cartProduct.id === productId);
     }
 
     return (

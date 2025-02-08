@@ -30,7 +30,7 @@ export default function ShoppingCartList({ initialCartProducts }: { initialCartP
                     <a className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full" href="/products">Browse our products</a>
                 </div>
             ) : (
-                <ul className="space-y-4">
+                <><ul className="space-y-4">
                     {cartProducts.map(product => (
                         <li key={product.id} className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300">
                             <Link key={product.id} href={"/products/" + product.id}>
@@ -47,7 +47,7 @@ export default function ShoppingCartList({ initialCartProducts }: { initialCartP
                             </Link>
                         </li>
                     ))}
-                </ul>
+                </ul><div className="flex mt-5"><a className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="/checkout">Checkout</a></div></>
             )}
         </div>
     )
