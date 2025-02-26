@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Image from "next/image";
 import NavBar from "./NavBar";
-
+import { ToastContainer } from "react-toastify";
 
 export const metadata: Metadata = {
   title: "Jumping Esquilo",
@@ -24,6 +24,7 @@ export default function RootLayout({
         </header>
         <NavBar />
         {children}
+        <ToastContainer />
         <footer className="mt-auto w-full md:4/12 px-4 mx-auto text-center bg-white shadow-md transform scale-y-[-1] py-4">
           <div className="bg-white transform scale-y-[-1]">
             <p>&copy; Copyright Andres Borges, {new Date().getFullYear()}</p>

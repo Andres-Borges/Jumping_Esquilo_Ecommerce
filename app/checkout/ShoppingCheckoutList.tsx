@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Product, products } from "../product-data";
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 export default function ShoppingCheckoutList({ initialCartProducts }: { initialCartProducts: Product[] }) {
     const [cartProducts, setCartProducts] = useState(initialCartProducts);
@@ -44,6 +45,11 @@ export default function ShoppingCheckoutList({ initialCartProducts }: { initialC
         await Promise.all(
             cartProducts.map(product => removeFromCart(product.id))
         );
+
+        //Alert successful purchase 
+        toast.success('Purchase done successfully!', {
+            position: "top-right"
+        });
 
         //Redirect to thank you page
         router.push('/');
