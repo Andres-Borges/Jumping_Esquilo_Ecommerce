@@ -1,5 +1,5 @@
 import { connectToDb } from "../db";
-
+export const dynamic = 'force-dynamic';
 export async function GET() {
     const { db } = await connectToDb();
     const products = await db.collection('products').find({}).toArray();
