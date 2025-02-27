@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export default function SetUserId() {
     useEffect(() => {
-        fetch('/api/').then(response => { });
+        fetch('/api/').then(() => { });
     }, []);
 
     return null;

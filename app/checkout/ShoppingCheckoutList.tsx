@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { Product, products } from "../product-data";
+import { Product } from "../product-data";
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 
@@ -19,7 +19,7 @@ export default function ShoppingCheckoutList({ initialCartProducts }: { initialC
     }
 
     function calculateTaxes() {
-        let total = calculateTotalWithoutTaxes();
+        const total = calculateTotalWithoutTaxes();
         //Get the percentage in taxes
         return total * taxPerCentage;
     }
@@ -66,7 +66,7 @@ export default function ShoppingCheckoutList({ initialCartProducts }: { initialC
             ) : (
                 <div className="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition duration-300 inline-block">
                     {cartProducts.map(product => (
-                        <div className="mb-4">
+                        <div key={product.id} className="mb-4">
                             <h3 className="font-bold inline-block w-96">{product.name}:</h3>
                             <span>${product.price}.00</span>
                         </div>

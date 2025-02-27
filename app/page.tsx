@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import SetUserId from "./components/SetUserId";
 
 export default async function Home() {
@@ -8,7 +8,7 @@ export default async function Home() {
       <SetUserId />
       <div className="flex flex-row items-center">
         <div className="basis-1/2">
-          <img src="/EsquiloLogo.png" alt="Esquilo Logo" title="Esquilo Logo" />
+          <Image src="/EsquiloLogo.png" alt="Esquilo Logo" title="Esquilo Logo" width={500} height={500} />
         </div>
         <div className="basis-1/2">
           <h1 className="text-8xl font-bold">PROGRAM</h1>

@@ -1,4 +1,5 @@
 import NotFoundPage from "@/app/not-found";
+import Image from "next/image";
 
 export const dynamic = 'force-dynamic';
 
@@ -14,7 +15,7 @@ export default async function ProductDetailPage({ params }: { params: { id: stri
     return (
         <div className="container mx-auto p-8 flex flex-col md:flex-row">
             <div className="md:w-1/3 mb-4 md:mb-0 md:mr-8">
-                <img src={'/' + product.imageUrl} alt={product.name} title={product.name} className="w-full h-auto rounded-lg shadow-md" />
+                <Image src={'/' + product.imageUrl} alt={product.name} title={product.name} className="w-full h-auto rounded-lg shadow-md" width={300} height={300} />
             </div>
             <div className="md:w-1/2">
                 <h1 className="text-4xl font-bold mb-4">{product.name}</h1>

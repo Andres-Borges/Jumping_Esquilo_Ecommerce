@@ -1,5 +1,7 @@
 import ShoppingCheckoutList from "./ShoppingCheckoutList";
 
+export const dynamic = 'force-dynamic';
+
 export default async function CheckoutPage() {
     const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/users/1/cart', {
         cache: 'no-cache',
