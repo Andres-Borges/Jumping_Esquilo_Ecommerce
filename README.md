@@ -12,8 +12,8 @@ Full-Stack e-commerce website developed with Next.JS. It was a challenging yet r
 
 ## Skills Developed
 * Full-Stack web application development with Next.JS, TypeScript and Tailwind CSS
-* Web Application route testing using Postman
-* Hosting a database int the Cloud through AWS using MongoDB Atlas
+* Web Application Integration Testing using Postman API
+* Cloud-Hosted database through AWS using MongoDB Atlas
 * Web Application Deployment using Vercel
 * Use and maintanance of Environmental Variables for sensitive data
 * React-Toastify for dynamic alerts
